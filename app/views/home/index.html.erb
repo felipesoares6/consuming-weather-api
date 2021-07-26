@@ -1,0 +1,21 @@
+<br/>
+<br/>
+<br/>
+<form method="GET">
+  <label for="city">Search for the city name:</label>
+  <br/>
+  <input id="city" name="city" />
+
+  <button>Search</button>
+</form>
+
+<% if @city and @weather and @temp %>
+  <h1><%= @city %></h1>
+
+  <h3> Weather: <%= @weather["main"]%> </h3>
+
+  <h3>Temperature: <%= @temp["temp"] %> Celsius</h2>
+
+  <p>Min: <%= @temp["temp_min"] %> C Max: <%= @temp["temp_max"] %> C</p>
+<% end %>
+
